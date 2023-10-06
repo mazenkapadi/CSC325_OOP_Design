@@ -33,25 +33,11 @@ public class MainClass {
 
 		// ToDo 11: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
-		Scanner scnr = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-		System.out.println("What is your gpa?");
-		double gpa = scnr.nextDouble();
-		scnr.nextLine(); // Consume newline
-		std2.setGpa(gpa);
+		askAddressGPA(std2, sc);
 
-		System.out.println("What is your address?");
-		String address = scnr.nextLine();
-		std2.setAddress(address);
-
-		System.out.println("What is your gpa?");
-		double gpa2 = scnr.nextDouble();
-		scnr.nextLine(); // Consume newline
-		std3.setGpa(gpa2);
-
-		System.out.println("What is your address?");
-		String address2 = scnr.nextLine();
-		std3.setAddress(address2);
+		askAddressGPA(std3, sc);
 
 		// ToDo 12: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
@@ -65,5 +51,16 @@ public class MainClass {
 		// ToDo 13: add comments and explain your code
 
 		// ToDo 14: submit using a pull request.
+	}
+
+	private static void askAddressGPA(Student std2, Scanner sc) {
+		System.out.println("What is your gpa?");
+		double gpa = sc.nextDouble();
+		sc.nextLine(); // Consume newline
+		std2.setGpa(gpa);
+
+		System.out.println("What is your address?");
+		String address = sc.nextLine();
+		std2.setAddress(address);
 	}
 }
